@@ -1,3 +1,5 @@
+// Data for the "Core Concepts" section of the landing page
+
 import componentsImg from './assets/components.png';
 import propsImg from './assets/config.png';
 import jsxImg from './assets/jsx-ui.png';
