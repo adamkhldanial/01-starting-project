@@ -1,3 +1,5 @@
+<!-- More about Components -->
+
 At this point, you've built a first custom component and you, of course, also worked with the App component.
 
 For the moment, both components are stored in the App.jsx file (this will change later though).

@@ -1,4 +1,5 @@
-#More Prop Syntaxes
+<!-- More about Prop Syntaxes -->
+
 Beyond the various ways of setting and extracting props about which you learned in the previous lecture, there are even more ways of dealing with props.
 
 But no worries, you'll see all these different features & syntaxes in action throughout the course!
