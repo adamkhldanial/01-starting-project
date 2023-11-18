@@ -1,6 +1,10 @@
 // TabButton component
 
-export default function TabButton({children}) {
-    // Children props are the content between the opening and closing tags of a component
-    return <li><button>{children}</button></li>
+// Children props are the content between the opening and closing tags of a component
+export default function TabButton({ children, onSelect }) {
+    return (
+        <li>
+            <button onClick={onSelect}>{children}</button>
+        </li>
+    );
 }

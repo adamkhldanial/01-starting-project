@@ -1,9 +1,20 @@
+import { useState } from 'react'; // functions that start with 'use' are hooks and must only be called from inside a function component or another hook
+
 import { CORE_CONCEPTS } from './data.js';
 import Header from './components/Header/Header.jsx';
 import CoreConcepts from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
 
 function App() {
+
+  const [ selectedTopic, setSelectedTopic ] = useState('Please click a button'); // returns an array with two elements: the current state value and a function to update it
+
+  function handleSelect(selectedButton) {
+    // selectedButton => 'components', 'jsx', 'props', or 'state'
+    setSelectedTopic(selectedButton);
+    console.log(selectedTopic);
+}
+
   return (
     <div>
       <Header />
@@ -29,11 +40,12 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+            <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+            <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+            <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
           </menu>
+          {selectedTopic}
         </section>
       </main>
     </div>
